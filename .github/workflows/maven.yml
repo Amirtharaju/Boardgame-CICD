@@ -23,5 +23,9 @@ jobs:
         mvn compile
         mvn test
         mvn package
-      
+
+    - uses: actions/upload-artifact@v7
+      with:
+       name: boardgame-cicd
+       path: target/*.jar # or path/to/artifact
 
